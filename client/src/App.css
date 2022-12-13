@@ -1,0 +1,82 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.stockList {
+  width: 100%;
+  max-width: 450px;
+  min-height: 350px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: #00121c;
+  color: #fff;
+  padding: 30px;
+  display: block;
+  border-radius: 0.25rem;
+}
+.stockList .list {
+  padding: 10px;
+  border-bottom: 1px dotted #ececec;
+  /* letter-spacing: 1px; */
+}
+.stockList .list .title {
+  font-weight: normal;
+  text-decoration: underline;
+}
+.stockList .list .subtitle {
+  font-size: 10px;
+  text-decoration: underline;
+}
+.stockList .list .subtitle.green {
+  color: #34b71f;
+}
+.stockList .list .subtitle.red {
+  color: #f3392f;
+}
+
+.stockDetail .list {
+  border: none;
+  background-color: #1686b0;
+  min-height: 60px;
+}
+.stockDetail .criteria {
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+.stockDetail .criteria .title {
+  margin: 10px 0;
+}
+.stockDetail .criteria .subtitle {
+  font-size: 10px;
+}
+.stockDetail .criteria a {
+  color: #337ab7;
+}
+
+.stockValue .title {
+  font-size: 14px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.stockValue .subtitle {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.stockValue .indicator {
+  background-color: #fff;
+  min-height: 60px;
+  font-size: 14px;
+  padding: 10px;
+}
+.stockValue .indicator div {
+  float: left;
+  color: #333333;
+}
+.stockValue .indicator input {
+  float: right;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  width: 50%;
+}
