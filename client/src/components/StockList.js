@@ -5,10 +5,10 @@ const StockList = ({ scans }) => {
   return (
     <div className="stockList">
       {scans.map((scan) => (
-        <div className="list" key={scan.id}>
-          <Link to={`/${scan.id}`}>
-            <div className="title">{scan.name}</div>
-            <div className={`subtitle ${scan.color}`}>{scan.tag}</div>
+        <div className="list" key={scan?.id}>
+          <Link to={`/${scan?.id}`}>
+            <div className="title">{scan?.name}</div>
+            <div className={`subtitle ${scan?.color}`}>{scan?.tag}</div>
           </Link>
         </div>
       ))}

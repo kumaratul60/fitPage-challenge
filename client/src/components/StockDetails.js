@@ -4,7 +4,7 @@ import DataFormat from "../helper/DataFormat";
 
 const StockDetail = ({ scans }) => {
   const { id } = useParams();
-  const scan = scans.find((scan) => scan.id === parseInt(id));
+  const scan = scans.find((scan) => scan?.id === parseInt(id));
   let navigate = useNavigate();
   useEffect(() => {
     const links = document.querySelectorAll(".criteria a");
@@ -19,11 +19,11 @@ const StockDetail = ({ scans }) => {
     <>
       {scan && (
         <div className="stockList stockDetail">
-          <div className="list" key={scan.id}>
-            <div className="title">{scan.name}</div>
-            <div className={`subtitle ${scan.color}`}>{scan.tag}</div>
+          <div className="list" key={scan?.id}>
+            <div className="title">{scan?.name}</div>
+            <div className={`subtitle ${scan?.color}`}>{scan?.tag}</div>
           </div>
-          {scan.criteria.map((cri, index) => (
+          {scan?.criteria.map((cri, index) => (
             <div className="criteria" key={index}>
               <div
                 className="title"
@@ -31,7 +31,7 @@ const StockDetail = ({ scans }) => {
                   __html: DataFormat(id, cri, index),
                 }}
               />
-              {scan.criteria.length - 1 !== index && (
+              {scan?.criteria.length - 1 !== index && (
                 <div className="subtitle">and</div>
               )}
             </div>

@@ -22,7 +22,7 @@ function App() {
       const response = await axios.get(base_URL);
       const result = await response.data;
       setScans(result);
-      console.log(result);
+      // console.log(result);
     } catch (err) {
       console.log("err=>", err);
     }

@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 
 const StockValue = ({ scans }) => {
   const { id, criteria, va } = useParams();
-  const scan = scans.find((scan) => scan.id === parseInt(id));
-  const values = scan?.criteria[criteria].variable[va];
+  const scan = scans.find((scan) => scan?.id === parseInt(id));
+  const values = scan?.criteria[criteria]?.variable[va];
 
   return (
     <>
@@ -18,15 +18,15 @@ const StockValue = ({ scans }) => {
             ))}
           {values.type === "indicator" && (
             <div>
-              <div className="title">{values.study_type}</div>
+              <div className="title">{values?.study_type}</div>
               <div className="subtitle">Set Parameters</div>
               <div className="indicator">
                 <div>Period</div>
                 <input
                   type="number"
-                  min={values.min_value}
-                  max={values.max_value}
-                  defaultValue={values.default_value}
+                  min={values?.min_value}
+                  max={values?.max_value}
+                  defaultValue={values?.default_value}
                 />
               </div>
             </div>
